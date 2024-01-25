@@ -10,7 +10,7 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Details'),
+        title: Text('User ${user.id} Details'),
         leading: BackButton(
           // Back button
           onPressed: () => Navigator.pop(context),
@@ -46,23 +46,20 @@ class DetailsPage extends StatelessWidget {
             const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'First Name: ${user.firstName}',
-                    style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'Last Name: ${user.lastName}',
-                    style: const TextStyle(fontSize: 18),
-                  ),
-                  Text(
-                    'Email: ${user.email}',
-                    style: const TextStyle(fontSize: 16),
-                  ),
-                ],
+              child: Center(
+                child: Column(
+                  children: [
+                    Text(
+                      '${user.firstName} ${user.lastName}',
+                      style: const TextStyle(
+                          fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      user.email,
+                      style: const TextStyle(fontSize: 18),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
