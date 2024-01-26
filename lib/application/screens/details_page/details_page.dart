@@ -10,6 +10,8 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 10,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('User ${user.id} Details'),
         leading: BackButton(
           // Back button

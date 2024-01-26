@@ -1,9 +1,3 @@
-class UsersList {
-  final List<UserData> usersList;
-
-  UsersList({required this.usersList});
-}
-
 class UserData {
   final int id;
   final String email;
