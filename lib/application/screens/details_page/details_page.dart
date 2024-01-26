@@ -14,7 +14,6 @@ class DetailsPage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('User ${user.id} Details'),
         leading: BackButton(
-          // Back button
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -22,12 +21,6 @@ class DetailsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image.network(
-            //   user.avatar,
-            //   width: double.infinity,
-            //   fit: BoxFit.fitWidth,
-            //   height: 250,
-            // ),
             Image.network(
               user.avatar,
               fit: BoxFit.fill,
